@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  datasource: # jdbc 不需要配 driverClass 会自动匹配
+    url: jdbc:mysql://localhost:3306/gmallccc?characterEncoding=UTF-8
+    username: root
+    password: root
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #sql文件的位置
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰命名
